@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clustering Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Clustering Results</h1>
+        <h2>Cluster Centers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cluster</th>
+                    <th>Purchase Amount</th>
+                    <th>Frequency</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for center in centers %}
+                <tr>
+                    <td>{{ loop.index0 }}</td>
+                    <td>{{ center[0] }}</td>
+                    <td>{{ center[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Customer Clusters</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Purchase Amount</th>
+                    <th>Frequency</th>
+                    <th>Cluster</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for _, row in clusters.iterrows() %}
+                <tr>
+                    <td>{{ row.customer_id }}</td>
+                    <td>{{ row.purchase_amount }}</td>
+                    <td>{{ row.frequency }}</td>
+                    <td>{{ row.cluster }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('index') }}">Back</a>
+    </div>
+</body>
+</html>

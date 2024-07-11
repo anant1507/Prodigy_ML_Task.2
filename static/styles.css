@@ -1,0 +1,91 @@
+/* Ensure the body covers the full screen and has the background image */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../static/prodigy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Ensures text is readable on the background */
+}
+
+/* Center the content vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main heading style */
+h1 {
+    color: #fff; /* Text color for better readability on the background */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Style for forms to have a semi-transparent background */
+form {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style for number input */
+input[type="number"] {
+    margin-right: 10px;
+}
+
+/* Style for buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for tables */
+table {
+    width: 100%;
+    max-width: 800px; /* Limit the width of the table */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for table */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style for table header and data cells */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+/* Style for links */
+a {
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
